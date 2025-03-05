@@ -1,0 +1,27 @@
+@import play.i18n.Messages
+@import play.mvc.Http.Request
+@import play.api.mvc.RequestHeader
+@import helper._
+
+@()(implicit request: play.mvc.Http.Request)
+
+@main("Add Task") {
+<h2>Add a New Task</h2>
+
+<form action="@routes.TaskController.saveTask()" method="POST">
+    @helper.CSRF.formField(request.asScala())
+
+    <label>Task Title</label>
+    <input type="text" name="title" class="form-control" required>
+
+    <label>Task Notes</label>
+    <textarea name="note" class="form-control" placeholder="Add details..."></textarea>
+
+    <label>Set Reminder</label>
+    <input type="datetime-local" name="reminder" class="form-control">
+
+    <button type="submit" class="btn btn-save">Save Task</button>
+</form>
+
+<a href="@routes.LandingController.index()" class="btn btn-back">⬅ Back to Home</a>
+}

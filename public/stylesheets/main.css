@@ -1,0 +1,289 @@
+/* ======================= */
+/* GLOBAL STYLES - MODERN UI */
+/* ======================= */
+body {
+    font-family: 'Arial', sans-serif;
+    background: #181818; /* ✅ Smooth dark background */
+    color: #ffffff;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+/* ======================= */
+/* LANDING PAGE - SPLIT LAYOUT */
+/* ======================= */
+.landing-container {
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+}
+
+/* Left section - Text & Button */
+.landing-left {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 50px;
+    text-align: center;
+    background: linear-gradient(135deg, #222831, #31363F);
+}
+
+/* Right section - Graphics */
+.landing-right {
+    flex: 1;
+    background: linear-gradient(135deg, #3a3f47, #1c1f24);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 50px;
+}
+
+/* Fancy heading */
+.landing-left h1 {
+    font-size: 42px;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+/* Subtitle */
+.landing-left p {
+    font-size: 18px;
+    margin-bottom: 25px;
+    opacity: 0.9;
+}
+
+/* "Get Started" button */
+.landing-left .btn {
+    background-color: #007bff;
+    color: white;
+    padding: 14px 28px;
+    text-decoration: none;
+    font-size: 20px;
+    border-radius: 8px;
+    font-weight: bold;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.landing-left .btn:hover {
+    background-color: #0056b3;
+}
+
+/* Animated icon */
+.landing-right img {
+    width: 300px;
+    animation: float 3s ease-in-out infinite;
+}
+
+/* Floating animation */
+@keyframes float {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
+    100% { transform: translateY(0px); }
+}
+/* ======================= */
+/* TASK LIST PAGE STYLING */
+/* ======================= */
+
+
+h2{
+text-align: center;
+}
+.task-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    padding: 30px;
+}
+
+.task-card {
+    background: linear-gradient(135deg, #222831, #31363F);
+    padding: 20px;
+    border-radius: 10px;
+    width: 300px;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.task-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.5);
+}
+
+.task-card h3 {
+    color: #00ADB5;
+    font-size: 22px;
+    margin-bottom: 10px;
+}
+
+.task-card p {
+    font-size: 16px;
+    color: #EEEEEE;
+    opacity: 0.8;
+}
+
+/* ======================= */
+/* MODAL STYLING */
+/* ======================= */
+/* MODAL STYLING */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    justify-content: center; /* Centering */
+    align-items: center; /* Centering */
+}
+
+/* Modal Content */
+.modal-content {
+    background: #1E1E1E;
+    padding: 25px;
+    border-radius: 12px;
+    width: 400px;
+    text-align: center;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.5);
+    position: relative;
+}
+
+.modal-content h2 {
+    color: #00ADB5;
+}
+
+.modal-content p {
+    color: #EEEEEE;
+    font-size: 16px;
+    opacity: 0.9;
+}
+
+.btn-delete {
+    background: #d9534f;
+    color: white;
+    padding: 12px 20px;
+    text-decoration: none;
+    border-radius: 6px;
+    display: inline-block;
+    margin-top: 15px;
+    font-weight: bold;
+    transition: background 0.3s ease;
+}
+
+.btn-delete:hover {
+    background: #c9302c;
+}
+
+/* ======================= */
+/* ADD TASK PAGE STYLING */
+/* ======================= */
+form {
+    background: linear-gradient(135deg, #222831, #31363F);
+    padding: 30px;
+    border-radius: 12px;
+    width: 400px;
+    text-align: left;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.4);
+}
+
+form label {
+    display: block;
+    color: #EEEEEE;
+    font-size: 16px;
+    margin: 10px 0 5px;
+}
+
+form input {
+    width: 90%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: none;
+    border-radius: 6px;
+    background: #1E1E1E;
+    color: #fff;
+}
+form textarea{
+ width: 350px;
+ height: 150px;
+ padding: 15px;
+    margin-bottom: 15px;
+    border: none;
+    border-radius: 6px;
+    background: #1E1E1E;
+    color: #fff;
+}
+
+.btn-add {
+    background: #00ADB5;
+    color: white;
+    padding: 12px 20px;
+    text-decoration: none;
+    border-radius: 6px;
+    display: inline-block;
+    font-weight: bold;
+    transition: background 0.3s ease;
+    text-align: center;
+    width: 30%;
+}
+.btn-save{
+  background: #00ADB5;
+    color: white;
+    padding: 12px 20px;
+    text-decoration: none;
+    border-radius: 6px;
+    display: inline-block;
+    font-weight: bold;
+    transition: background 0.3s ease;
+    text-align: center;
+    width:95%;
+}
+.btn-container{
+display: flex;
+justify-content: center;
+align-items: center;
+}
+.btn-add:hover {
+    background: #008C9E;
+}
+.btn-save:hover {
+    background: #008C9E;
+}
+.btn-back {
+    display: block;
+    margin-top: 15px;
+    text-align: center;
+    color: #EEEEEE;
+    font-size: 16px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.btn-back:hover {
+    text-decoration: underline;
+}
+/* Close Button */
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 24px;
+    font-weight: bold;
+    color: #fff;
+    cursor: pointer;
+}
+
+.close-btn:hover {
+    color: #00ADB5;
+}
+

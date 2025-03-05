@@ -1,0 +1,15 @@
+@main("Welcome") {
+<div class="landing-container">
+    <!-- Left Side: Text & Button -->
+    <div class="landing-left">
+        <h1>Stay Organized, Work Smarter 🚀</h1>
+        <p>Manage your tasks efficiently with a sleek and modern to-do list.</p>
+        <a href="@routes.TaskController.listTasks()" class="btn">Get Started</a>
+    </div>
+
+    <!-- Right Side: Animated Icon -->
+    <div class="landing-right">
+        <img src="@routes.Assets.versioned("images/illustration.svg")" alt="Task Illustration">
+    </div>
+</div>
+}
