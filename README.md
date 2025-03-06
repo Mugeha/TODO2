@@ -18,10 +18,10 @@ This is a **To-Do List** web application built using the **Play Framework (Java)
 ### Homepage
 ![Homepage](assets/homepage.png)
 
-### Adding a Task
+### Adding a task
 ![Add Task](assets/addTask.png)
 
-### Editing a Task
+### My tasks
 ![Edit Task](assets/taskslist.png)
 ## 🔧 Installation & Setup
 
