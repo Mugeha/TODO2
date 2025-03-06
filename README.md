@@ -15,11 +15,14 @@ This is a **To-Do List** web application built using the **Play Framework (Java)
 - 📅 Set reminders for tasks
 - 🗂️ View all tasks
 
-## 📷 Screenshots
-![Landing Page Screenshot](screenshots/task list.png).
-![Task List Screenshot](screenshots/task_list.png)
-![Add Task Screenshot](screenshots/add_task.png)
+### Homepage
+![Homepage](assets/homepage.png)
 
+### Adding a Task
+![Add Task](assets/addTask.png)
+
+### Editing a Task
+![Edit Task](assets/taskslist.png)
 ## 🔧 Installation & Setup
 
 ### 1️⃣ Prerequisites
