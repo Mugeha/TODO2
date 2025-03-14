@@ -1,9 +1,11 @@
-GET     /               controllers.LandingController.index()
-GET     /tasks          controllers.TaskController.listTasks()
-GET     /task/new       controllers.TaskController.addTask(request : play.mvc.Http.Request)
-POST    /task/save      controllers.TaskController.saveTask(request : play.mvc.Http.Request)
-GET     /task/delete/:id controllers.TaskController.deleteTask(id: Long)
-GET /task/edit/:id controllers.TaskController.editTask(id: Long)
 
+GET     /               controllers.LandingController.index()
+
+GET     /tasks          controllers.TaskController.listTasks()
+GET     /task/new       controllers.TaskController.addTask(request: play.mvc.Http.Request)
+POST    /task/save      controllers.TaskController.saveTask(request: play.mvc.Http.Request)
+GET     /task/delete/:id controllers.TaskController.deleteTask(id: Long)
+GET     /task/edit/:id  controllers.TaskController.editTask(id: Long, request: play.mvc.Http.Request)
+POST    /task/update    controllers.TaskController.updateTask(request: play.mvc.Http.Request)
 
 GET     /assets/*file   controllers.Assets.versioned(path="/public", file: Asset)

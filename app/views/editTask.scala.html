@@ -1,0 +1,29 @@
+@import play.i18n.Messages
+@import play.mvc.Http.Request
+@import helper._
+@import models.Task
+
+@(task: Task, request: Request)
+
+@main("Edit Task") {
+<h2>Edit Task</h2>
+
+<form action="@routes.TaskController.updateTask()" method="POST">
+    @helper.CSRF.formField(request.asScala())
+
+    <input type="hidden" name="id" value="@task.id">
+
+    <label>Task Title</label>
+    <input type="text" name="title" class="form-control" value="@task.title" required>
+
+    <label>Task Notes</label>
+    <textarea name="note" class="form-control">@task.note</textarea>
+
+    <label>Set Reminder</label>
+    <input type="datetime-local" name="reminder" class="form-control" value="@task.reminder">
+
+    <button type="submit" class="btn btn-save">Update Task</button>
+</form>
+
+<a href="@routes.LandingController.index()" class="btn btn-back">⬅ Back to Home</a>
+}

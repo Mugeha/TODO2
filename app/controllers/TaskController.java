@@ -18,7 +18,7 @@ public class TaskController extends Controller {
         this.formFactory = formFactory;
     }
 
-    // List tasks
+    // List all tasks
     public Result listTasks() {
         List<Task> tasks = Task.find.all();
         return ok(views.html.index.render(tasks));
@@ -40,7 +40,7 @@ public class TaskController extends Controller {
         return redirect(routes.TaskController.listTasks());
     }
 
-    // Delete task
+    // Delete a task
     public Result deleteTask(Long id) {
         Task task = Task.find.byId(id);
         if (task != null) {
@@ -48,11 +48,34 @@ public class TaskController extends Controller {
         }
         return redirect(routes.TaskController.listTasks());
     }
-    public Result editTask(Long id) {
+
+    // Show edit task form
+    public Result editTask(Long id, Http.Request request) {
         Task task = Task.find.byId(id);
         if (task == null) {
             return notFound("Task not found");
         }
+        return ok(views.html.editTask.render(task, request));
+    }
+
+    // Update an existing task
+    public Result updateTask(Http.Request request) {
+        Form<Task> taskForm = formFactory.form(Task.class).bindFromRequest(request);
+
+        if (taskForm.hasErrors()) {
+            return badRequest("Invalid data");
+        }
+
+        Task updatedTask = taskForm.get();
+        Task existingTask = Task.find.byId(updatedTask.id);
+
+        if (existingTask != null) {
+            existingTask.setTitle(updatedTask.getTitle());
+            existingTask.setNote(updatedTask.getNote());
+            existingTask.setReminder(updatedTask.getReminder());
+            existingTask.update();
+        }
+
         return redirect(routes.TaskController.listTasks());
     }
 

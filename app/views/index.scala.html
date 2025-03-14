@@ -1,4 +1,5 @@
 @import models.Task
+
 @(tasks: List[Task])
 
 @main("My Tasks") {
@@ -6,34 +7,26 @@
 
 <div class="btn-container">
   <a href="@routes.TaskController.addTask()" class="btn btn-add"> Add Task</a>
-
 </div>
 
-
-  <div class="task-container">
-    @for(task <- tasks) {
-    <div class="task-card" onclick="openTaskModal('@task.id', '@task.title', '@task.note', '@task.reminder')">
-      <h3>@task.title</h3>
-      <p>@task.note</p>
-
-      <!-- 🖊 EDIT ICON (Navigates to Add Task Page with Pre-filled Data) -->
-      <a href="/task/edit/@task.id" class="edit-btn">
-        ✏️
-      </a>
-    </div>
-    }
+<div class="task-container">
+  @for(task <- tasks) {
+  <div class="task-card" onclick="openTaskModal('@task.id', '@task.title', '@task.note', '@task.reminder')">
+    <h3>@task.title</h3>
+    <p>@task.note</p>
   </div>
-
-
+  }
+</div>
 
 <!-- Task Modal -->
 <div id="taskModal" class="modal">
   <div class="modal-content">
-    <span class="close-btn" onclick="closeTaskModal()">&times;</span> <!-- Close Button -->
+    <span class="close-btn" onclick="closeTaskModal()">&times;</span>
     <h2 id="modalTitle"></h2>
     <p id="modalNote"></p>
     <p id="modalReminder"></p>
     <a href="" id="deleteBtn" class="btn btn-delete">🗑 Delete Task</a>
+    <a href="" id="editBtn" class="btn btn-edit">Edit Task</a>
   </div>
 </div>
 
@@ -44,22 +37,20 @@
     document.getElementById("modalReminder").innerText = reminder;
 
     document.getElementById("deleteBtn").href = "/task/delete/" + id;
+    document.getElementById("editBtn").href = "/task/edit/" + id;
 
-    let modal = document.getElementById("taskModal");
-    modal.style.display = "flex"; // Use flex for centering
+    document.getElementById("taskModal").style.display = "flex";
   }
 
   function closeTaskModal() {
     document.getElementById("taskModal").style.display = "none";
   }
 
-  // Close the modal when clicking outside the content
   window.onclick = function(event) {
     let modal = document.getElementById("taskModal");
     if (event.target === modal) {
       modal.style.display = "none";
     }
-  }
+  };
 </script>
-
 }
