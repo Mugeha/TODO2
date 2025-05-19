@@ -146,22 +146,22 @@ Description: Deletes the task with the specified ID.
 ```
 
 📚 What I Learned
-Setting up Play Framework with a MySQL database
+- Setting up Play Framework with a MySQL database
 
-Writing modular MVC code in Java
+- Writing modular MVC code in Java
 
-Designing and documenting clean API endpoints
+- Designing and documenting clean API endpoints
 
-Communicating technical details clearly with docs & visuals
+- Communicating technical details clearly with docs & visuals
 
 🚀 What’s Next?
 I’d love to:
 
-Add authentication for users
+- Add authentication for users
 
-Improve the UI/UX further
+- Improve the UI/UX further
 
-Deploy this publicly on Render or Railway
+- Deploy this publicly on Render or Railway
 
 ## 🛠️ Contributing
 Feel free to contribute by **forking** the repository and creating a **pull request**.
