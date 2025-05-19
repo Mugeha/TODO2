@@ -82,48 +82,46 @@ The backend exposes the following RESTful endpoints:
   },
   ...
 ]
-🔹 POST /task/save
+```
+**🔹 POST /task/save**
 Description: Creates a new task.
 
-Request Body Example:
+**Request Body Example:**
+```json
 {
   "title": "Finish README",
   "description": "Make it look pro",
   "reminder": "2025-05-20T14:00:00"
 }
-Response Example:
-
+```
+**Response Example:**
+```json
 {
   "message": "Task saved successfully",
   "taskId": 5
 }
-🔹 GET /task/edit/:id
+```
+**🔹 GET /task/edit/:id**
 Description: Retrieves a specific task for editing.
 
-Example:
+**Example:**
 
-bash
-Copy
-Edit
-/task/edit/5
-Response Example:
-
-json
-Copy
-Edit
+```json
 {
   "id": 5,
   "title": "Finish README",
   "description": "Make it look pro",
   "reminder": "2025-05-20T14:00:00"
 }
-🔹 GET /task/delete/:id
+```
+**🔹 GET /task/delete/:id**
 Description: Deletes the task with the specified ID.
 
-Example:
+**Example:**
 
 /task/delete/5
-Response Example:
+**Response Example:**
+```json
 {
   "message": "Task deleted successfully"
 }
