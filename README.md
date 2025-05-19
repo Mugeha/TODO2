@@ -163,6 +163,9 @@ I’d love to:
 
 - Deploy this publicly on Render or Railway
 
+## 📖 Blog Post
+Curious about how I built this? Check out the full breakdown here 👉 [Read the blog post](https://mugeha585.hashnode.dev/your-post-slug)
+
 ## 🛠️ Contributing
 Feel free to contribute by **forking** the repository and creating a **pull request**.
 
