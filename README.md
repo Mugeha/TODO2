@@ -61,13 +61,45 @@ Open your browser and visit:
 http://localhost:9000/
 ```
 
-## 📌 API Endpoints
+## 📡 API Reference
 
-| Method | Endpoint | Description |
-| GET | `/tasks` | Get all tasks |
-| POST | `/task/save` | Add a new task |
-| GET | `/task/delete/:id` | Delete a task |
-| GET | `/task/edit/:id` | Edit a task |
+The backend exposes the following RESTful endpoints:
+
+---
+
+### 🔹 GET `/tasks`
+
+**Description:** Fetches all tasks from the database.
+
+**Response Example:**
+```json
+[
+  {
+    "id": 1,
+    "title": "Buy groceries",
+    "description": "Milk, Bread, Eggs",
+    "reminder": "2025-05-20T09:00:00"
+  },
+  ...
+]
+🔹 POST /task/save
+Description: Creates a new task.
+
+Request Body Example:
+{
+  "title": "Finish README",
+  "description": "Make it look pro",
+  "reminder": "2025-05-20T14:00:00"
+}
+Response Example:
+
+json
+Copy
+Edit
+{
+  "message": "Task saved successfully",
+  "taskId": 5
+}
 
 ## 📜 Folder Structure
 ```
