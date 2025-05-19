@@ -5,6 +5,12 @@ This is a **To-Do List** web application built using the **Play Framework (Java)
 
 Walkthrough video - https://www.loom.com/share/2096c6737c4841538463188262b047c3?sid=e7cfb793-152a-4250-9b32-2eae950937dd
 
+## 🛠️ Why I Used Java Play Framework
+I’ve always worked with Node or PHP, so I challenged myself to build a full-stack project with Java. Play Framework gave me:
+- Type safety
+- A robust MVC structure
+- Built-in dev server and form helpers
+
 ## 🛠️ Tech Stack
 - **Backend:** Java (Play Framework)
 - **Frontend:** HTML, CSS (Bootstrap), JavaScript
