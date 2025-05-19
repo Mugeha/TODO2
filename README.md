@@ -93,14 +93,41 @@ Request Body Example:
 }
 Response Example:
 
-json
-Copy
-Edit
 {
   "message": "Task saved successfully",
   "taskId": 5
 }
+🔹 GET /task/edit/:id
+Description: Retrieves a specific task for editing.
 
+Example:
+
+bash
+Copy
+Edit
+/task/edit/5
+Response Example:
+
+json
+Copy
+Edit
+{
+  "id": 5,
+  "title": "Finish README",
+  "description": "Make it look pro",
+  "reminder": "2025-05-20T14:00:00"
+}
+🔹 GET /task/delete/:id
+Description: Deletes the task with the specified ID.
+
+Example:
+
+/task/delete/5
+Response Example:
+{
+  "message": "Task deleted successfully"
+}
+```
 ## 📜 Folder Structure
 ```
 📂 app
