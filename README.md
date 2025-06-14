@@ -3,7 +3,7 @@
 ## 📌 Overview
 This is a **To-Do List** web application built using the **Play Framework (Java)** and **MySQL** as the database. The app allows users to **add, edit, delete, and manage tasks** with reminders.
 
-Walkthrough video - (https://www.loom.com/share/2096c6737c4841538463188262b047c3?sid=e7cfb793-152a-4250-9b32-2eae950937dd)
+Walkthrough video - [Loom Walkthrough](https://www.loom.com/share/2096c6737c4841538463188262b047c3?sid=e7cfb793-152a-4250-9b32-2eae950937dd)
 
 ## 🛠️ Why I Used Java Play Framework
 I’ve always worked with Node or PHP, so I challenged myself to build a full-stack project with Java. Play Framework gave me:
